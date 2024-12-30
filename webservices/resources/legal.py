@@ -604,8 +604,13 @@ def apply_ao_specific_query_params(query, **kwargs):
     if check_filter_exists(kwargs, "ao_name"):
         must_clauses.append(Q("match", name=" ".join(kwargs.get("ao_name"))))
 
-    if kwargs.get("ao_is_pending") is not None:
-        must_clauses.append(Q("term", is_pending=kwargs.get("ao_is_pending")))
+    # if kwargs.get("ao_is_pending") is not None:
+    #     must_clauses.append(Q("term", is_pending=kwargs.get("ao_is_pending")))
+
+    ao_pending_boolean = kwargs.get("ao_is_pending")
+    print("Input, is_ao_pending:::::::::::::::", ao_pending_boolean)
+    if filters.validate_boolean_dropdown(ao_pending_boolean):
+        must_clauses.append(Q("term", is_pending=ao_pending_boolean))
 
     if kwargs.get("ao_status"):
         must_clauses.append(Q("match", status=kwargs.get("ao_status")))

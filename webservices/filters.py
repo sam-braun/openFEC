@@ -199,3 +199,16 @@ def validate_ao_requestor_type(ao_requestor_type):
                 valid_values.append(value)
 
         return valid_values
+
+
+def validate_boolean_dropdown(value):
+    # If value is None or an empty string, treat it as False
+    if value is None or value == "":
+        return False
+
+    # If the value is a boolean, return it as is
+    if isinstance(value, bool):
+        return value
+
+    # Return False if the value is not a boolean, None, or empty string
+    return False
