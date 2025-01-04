@@ -50,7 +50,7 @@ We are always trying to improve our documentation. If you have suggestions or ru
    - Python (the latest 3.10 release, which includes `pip` and a built-in version of `virtualenv` called `venv`).
    - The latest long term support (LTS) or stable release of Node.js (which includes npm)
    - PostgreSQL (the latest 13 release).
-     - Read a [Mac OSX tutorial](https://www.moncefbelyamani.com/how-to-install-postgresql-on-a-mac-with-homebrew-and-lunchy/)
+     - Read a [macOS tutorial](https://www.moncefbelyamani.com/how-to-install-postgresql-on-a-mac-with-homebrew-and-lunchy/)
      - Read a [Windows tutorial](https://www.postgresqltutorial.com/install-postgresql/)
      - Read a [Linux tutorial](https://www.postgresql.org/docs/13/installation.html) (or follow your OS package manager)
    - Elastic Search 7.x (instructions [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/_installation.html))
